@@ -20,18 +20,8 @@ $font-url: 'https://fonts.googleapis.com/css?family=Maven+Pro';
     @return(($target * 1px));
 }
 
-// Add percentage of white to a color
-@function tint($color, $percent) {
-    @return mix(white, $color, $percent);
-}
-
-// Add percentage of black to a color
-@function shade($color, $percent) {
-    @return mix(black, $color, $percent);
-}
-
 // Breakpoints
 $breaks: (
-  'sm': 320px,
+  'sm': 767px,
   'med': 768px
 )

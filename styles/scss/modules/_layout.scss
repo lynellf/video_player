@@ -1,11 +1,6 @@
 .app {
   @include mq('sm') {
-    max-width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
   };
 
   @include mq('med') {
@@ -13,7 +8,5 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }

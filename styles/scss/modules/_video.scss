@@ -1,4 +1,27 @@
+@import url('../../js/vendor/mediaelement/mediaelementplayer.css');
 .video {
-  max-width: 600px;
-  max-height: auto;
+  @include e('container') {
+    @include mq('sm') {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mq('med') {
+      width: pem(691.19);
+      height: pem(389);
+    }
+  }
+
+  @include e('player') {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mejs {
+  @include e('inner') {
+    .mejs__controls {
+      background: black;
+    }
+  }
 }

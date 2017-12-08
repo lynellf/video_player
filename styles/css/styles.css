@@ -7,6 +7,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("../../js/vendor/mediaelement/mediaelementplayer.css");
 html {
   line-height: 1.15;
   /* 1 */
@@ -392,29 +393,44 @@ template {
 
 * {
   box-sizing: border-box;
-  line-height: 2.5em;
+  line-height: 1.875em;
   font-family: 'Maven Pro', sans-serif; }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .app {
-    max-width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; } }
+    display: block; } }
 @media (min-width: 768px) {
   .app {
     max-width: 43.2em;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; } }
+    flex-direction: column; } }
 
-.video {
-  max-width: 600px;
-  max-height: auto; }
+@media (max-width: 767px) {
+  .video__container {
+    width: 100%;
+    height: auto; } }
+@media (min-width: 768px) {
+  .video__container {
+    width: 43.199375em;
+    height: 24.3125em; } }
+.video__player {
+  width: 100%;
+  height: 100%; }
+
+.mejs__inner .mejs__controls {
+  background: black; }
+
+@media (max-width: 767px) {
+  .transcript {
+    padding: 1em; } }
+@media (min-width: 768px) {
+  .transcript {
+    max-width: 43.199375em; } }
+
+.track:hover {
+  cursor: pointer;
+  color: grey; }
 
 .active {
   color: orange; }
