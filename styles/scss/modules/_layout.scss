@@ -1,0 +1,19 @@
+.app {
+  @include mq('sm') {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  };
+
+  @include mq('med') {
+    max-width: pem(691.2);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

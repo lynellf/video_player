@@ -1,0 +1,37 @@
+
+$font-url: 'https://fonts.googleapis.com/css?family=Maven+Pro';
+
+//====================================================
+//Functions
+//=====================================================
+
+//Converts pixels to ems
+@function pem($pixels) {
+    @return($pixels/16 *1em);
+}
+
+// Load imported fonts
+@if variable-exists(font-url) {
+    @import url($font-url);
+}
+
+//Value to pixels
+@function pixels($target) {
+    @return(($target * 1px));
+}
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+    @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+    @return mix(black, $color, $percent);
+}
+
+// Breakpoints
+$breaks: (
+  'sm': 320px,
+  'med': 768px
+)
