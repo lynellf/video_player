@@ -1,11 +1,6 @@
 .transcript {
-    @include mq('sm') {
-        padding: pem(16);
-    }
-
-    @include mq('med') {
-        max-width: pem(691.19);
-    }
+    padding: pem(16);
+    max-width: pem(691.19);
 }
 
 .track {

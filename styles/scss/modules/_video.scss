@@ -1,15 +1,10 @@
 @import url('../../js/vendor/mediaelement/mediaelementplayer.css');
 .video {
   @include e('container') {
-    @include mq('sm') {
-      width: 100%;
-      height: auto;
-    }
-
-    @include mq('med') {
-      width: pem(691.19);
-      height: pem(389);
-    }
+    width: 100%;
+    height: auto;
+    max-width: pem(691.19);
+    max-height: pem(389);
   }
 
   @include e('player') {

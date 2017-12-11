@@ -29,6 +29,7 @@ video.mediaelementplayer({
 // Highlight transcript text as video plays.
 // The start and end checkpoints of the video transcript are
 // matched to the index position of each track class.
+
 // For as long as the timestamp falls between the start and end
 // checkpoint, the track class shall be modified to change state.
 
@@ -54,7 +55,6 @@ player.ontimeupdate = () => {
 
 tracks.on( 'click', (event)=> {
     const pos = tracks.index(event.target),
-    time = player.currentTime,
     start = chkpt.start;
     player.currentTime = start[pos];
 });

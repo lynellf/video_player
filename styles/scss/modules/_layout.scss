@@ -1,12 +1,6 @@
 .app {
-  @include mq('sm') {
-    display: block;
-  };
-
-  @include mq('med') {
-    max-width: pem(691.2);
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-  }
+  max-width: pem(691.2);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
